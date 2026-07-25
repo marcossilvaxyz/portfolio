@@ -468,11 +468,7 @@ footer {
   }
 
   .back-top {
-    right: 20px;
-    bottom: 20px;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
+    display: none;
   }
 }
 
