@@ -3,210 +3,506 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#030303">
+
     <title>Marcos Alexandre | Portfólio</title>
 
-    <meta name="description" content="Portfólio de Marcos Alexandre, Desenvolvedor Front-end em formação.">
+    <meta name="description" content="Portfólio de Marcos Alexandre, Desenvolvedor Front-end em formação. Conheça meus projetos, habilidades e formas de contato.">
+
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- font awesome -->
-     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- font awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 </head>
 
 <body>
+    <!-- progresso da pagina -->
+    <div class="scroll-progress"></div>
+
     <!-- header -->
     <header id="header">
         <nav class="navbar">
-            <h2 class="logo" translate="no">
+            <a href="#home" class="logo" translate="no" aria-label="MARS - início">
                 MARS<span>.</span>
-            </h2>
+            </a>
 
-            <ul class="menu">
-                <li><a href="#home">Início</a></li>
+            <ul class="menu" id="menu">
+                <li><a href="#home" class="current">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
-            <div class="menu-mobile">
+
+            <button
+                class="menu-mobile"
+                type="button"
+                aria-label="Abrir menu"
+                aria-controls="menu"
+                aria-expanded="false"
+            >
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
         </nav>
     </header>
 
-    <!-- inicio -->
-    <section id="home">
-        <div class="home-content">
-            <div class="text">
-                <p>Olá 👋🏼</p>
-                <h1>Eu sou Marcos Alexandre</h1>
-                <h3>Desenvolvedor Front-end em formação</h3>
+    <main>
+        <!-- inicio -->
+        <section id="home">
+            <div class="home-content">
+                <div class="text">
+                    <div class="availability">
+                        <span></span>
+                        Disponível para oportunidades
+                    </div>
 
-                <p>
-                    Estudando HTML, CSS e JavaScript para construir interfaces modernas,
-                    responsivas e funcionais.
+                    <p class="hello">Olá, eu sou 👋🏼</p>
+
+                    <h1>Marcos Alexandre</h1>
+
+                    <h3 aria-label="Desenvolvedor Front-end em formação">
+                        Desenvolvedor Front-end em formação
+                    </h3>
+
+                    <p class="home-description">
+                        Estudando HTML, CSS e JavaScript para construir interfaces modernas,
+                        responsivas e funcionais que ofereçam uma ótima experiência ao usuário.
+                    </p>
+
+                    <div class="buttons">
+                        <a
+                            href="#projects"
+                            class="btn"
+                        >
+                            Ver Projetos
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a
+                            href="https://github.com/marcossilvaxyz"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn secondary"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+
+                    <a
+                        href="./assets/curriculo.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="resume-link"
+                    >
+                        <i class="fa-regular fa-file-lines"></i>
+                        Visualizar currículo
+                    </a>
+
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+
+                <div class="image">
+                    <div class="image-wrapper">
+                        <img
+                            src="./assets/images/profile.webp"
+                            alt="Foto de Marcos Alexandre"
+                            width="500"
+                            height="500"
+                            loading="eager"
+                            fetchpriority="high"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="image-info image-info-top">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <span>Área</span>
+                            <strong>Front-end</strong>
+                        </div>
+                    </div>
+
+                    <div class="image-info image-info-bottom">
+                        <i class="fa-solid fa-check"></i>
+                        <div>
+                            <span>Status</span>
+                            <strong>Em evolução</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sobre mim -->
+        <section id="about">
+            <div class="container">
+                <span class="section-label">Sobre mim</span>
+                <h2>Conheça minha jornada na tecnologia</h2>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Meu nome é Marcos Alexandre. Atualmente estudo HTML, CSS e
+                            JavaScript com foco em desenvolvimento Front-end.
+                        </p>
+
+                        <p>
+                            Gosto de aprender novas tecnologias e transformar ideias em
+                            interfaces bonitas, organizadas e funcionais. Em cada projeto,
+                            busco melhorar minha lógica, responsividade e atenção aos detalhes.
+                        </p>
+
+                        <a href="#contact" class="about-link">
+                            Vamos conversar
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="about-info">
+                        <div class="about-card">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <div>
+                                <h3>Interfaces responsivas</h3>
+                                <p>Projetos adaptados para computadores, tablets e celulares.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div>
+                                <h3>Aprendizado contínuo</h3>
+                                <p>Sempre buscando evoluir e encontrar soluções melhores.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <strong>03+</strong>
+                            <div>
+                                <h3>Projetos publicados</h3>
+                                <p>Aplicações desenvolvidas e disponíveis online.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- habilidades -->
+        <section id="skills">
+            <div class="container">
+                <span class="section-label">Habilidades</span>
+                <h2>Tecnologias que utilizo</h2>
+
+                <p class="section-description">
+                    Ferramentas que fazem parte dos meus estudos e projetos Front-end.
                 </p>
 
-                <div class="buttons">
-                    <a href="https://github.com/marcossilvaxyz" target="_blank" rel="noopener noreferrer" class="btn">
-                    GitHub
-                    </a>
-                    <a href="./assets/curriculo.pdf" target="_blank" rel="noopener noreferrer" class="btn secondary">
-                    Currículo
-                    </a>
-                </div>
-            </div>
-
-            <div class="image">
-                <img src="./assets/images/profile.webp" alt="Foto de Perfil" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <!-- sobre mim -->
-    <section id="about">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <p>
-                Meu nome é Marcos Alexandre.
-                Atualmente estudo HTML, CSS e JavaScript com foco em desenvolvimento
-                Front-end.
-                Gosto de aprender novas tecnologias e transformar ideias em interfaces
-                bonitas, organizadas e funcionais.
-            </p>
-        </div>
-    </section>
-
-    <!-- habilidades -->
-    <section id="skills">
-        <div class="container">
-            <h2>Habilidades</h2>
-            <div class="skills-grid">
-                <div class="card">
-                    <i class="fa-brands fa-html5"></i>
-                    <h3>HTML5</h3>
-                </div>
-
-                <div class="card">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                </div>
-
-                <div class="card">
-                    <i class="fa-brands fa-js"></i>
-                    <h3>JavaScript</h3>
-                </div>
-
-                <div class="card">
-                    <i class="fa-brands fa-git-alt"></i>
-                    <h3>Git</h3>
-                </div>
-
-                <div class="card">
-                    <i class="fa-brands fa-github"></i>
-                    <h3>GitHub</h3>
-                </div>
-
-                <div class="card">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>VS Code</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- projetos -->
-
-    <section id="projects">
-        <div class="container">
-            <h2>Projetos</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <img src="./assets/images/portfolio.webp" alt="projeto" loading="lazy">
-
-                    <h3>Portfólio</h3>
-                    <p>
-                        Meu portfólio pessoal desenvolvido com HTML, CSS e JavaScript.
-                    </p>
-
-                    <div class="project-buttons">
-                        <a href="https://marcossilvaxyz.github.io/portfolio/" target="_blank">Ver Projeto</a>
-                        <a href="https://github.com/marcossilvaxyz/portfolio" target="_blank">Código</a>
+                <div class="skills-grid">
+                    <div class="card">
+                        <span class="card-number">01</span>
+                        <i class="fa-brands fa-html5"></i>
+                        <h3>HTML5</h3>
+                        <p>Estruturas semânticas, acessíveis e organizadas.</p>
                     </div>
-                </article>
 
-                <article class="project-card">
-                    <img src="./assets/images/projeto1.webp" alt="projeto">
-                    <h3>Formulário de Validação</h3>
-                    <p>
-                        Formulário de cadastro responsivo com validação em tempo real,
-                        máscara de telefone e indicador de força da senha.
-                    </p>
-
-                    <div class="project-buttons">
-                        <a href="https://marcossilvaxyz.github.io/formulario-de-validacao/" target="_blank">Ver Projeto</a>
-                        <a href="https://github.com/marcossilvaxyz/formulario-de-validacao.git" target="_blank">Código</a>
+                    <div class="card">
+                        <span class="card-number">02</span>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                        <p>Layouts responsivos, animações e interfaces modernas.</p>
                     </div>
-                </article>
 
-                <article class="project-card">
-                    <img src="./assets/images/projeto2.webp" alt="projeto">
-                    <h3>Relógio Digital</h3>
-                    <p>
-                        Relógio digital responsivo que exibe hora,
-                        data e fuso horário em tempo real. Possui temas claro e escuro,
-                        formatos de 12 e 24 horas, visual dinâmico conforme o período do dia e preferências salvas no navegador.
-
-                    </p>
-
-                    <div class="project-buttons">
-                        <a href="https://marcossilvaxyz.github.io/relogio-digital/" target="_blank">Ver Projeto</a>
-                        <a href="https://github.com/marcossilvaxyz/relogio-digital.git" target="_blank">Código</a>
+                    <div class="card">
+                        <span class="card-number">03</span>
+                        <i class="fa-brands fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <p>Interatividade, manipulação do DOM e lógica.</p>
                     </div>
-                </article>
+
+                    <div class="card">
+                        <span class="card-number">04</span>
+                        <i class="fa-brands fa-git-alt"></i>
+                        <h3>Git</h3>
+                        <p>Versionamento e organização do desenvolvimento.</p>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-number">05</span>
+                        <i class="fa-brands fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>Publicação, documentação e compartilhamento de projetos.</p>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-number">06</span>
+                        <i class="fa-solid fa-code"></i>
+                        <h3>VS Code</h3>
+                        <p>Ambiente de desenvolvimento e produtividade.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- contato -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contato</h2>
-            <p>
-                Gostou do meu trabalho?
-                Vamos conversar!
-            </p>
+        <!-- projetos -->
+        <section id="projects">
+            <div class="container">
+                <span class="section-label">Projetos</span>
+                <h2>Projetos em destaque</h2>
 
-        <div class="socials">
-        <a href="https://github.com/marcossilvaxyz" target="_blank">
-        <i class="fa-brands fa-github"></i>
-        </a>
+                <p class="section-description">
+                    Alguns projetos que desenvolvi para praticar, aprender e demonstrar
+                    minhas habilidades.
+                </p>
 
-        <a href="https://linkedin.com/in/marcos-silva-001xyz/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-        </a>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img
+                                src="./assets/images/portfolio.webp"
+                                alt="Prévia do portfólio pessoal"
+                                width="800"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <span class="project-status">Online</span>
+                        </div>
 
-        <a href="mailto:marcossilva0.xyz@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-        </a>
+                        <div class="project-content">
+                            <span class="project-number">Projeto 01</span>
+                            <h3>Portfólio Pessoal</h3>
+                            <p>
+                                Meu portfólio pessoal desenvolvido para apresentar minha
+                                trajetória, habilidades e projetos.
+                            </p>
 
-        <a href="https://wa.me/5563993044469" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        </div>
-        </div>
-    </section>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-buttons">
+                                <a
+                                    href="https://marcossilvaxyz.github.io/portfolio/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Ver Projeto
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                                <a
+                                    href="https://github.com/marcossilvaxyz/portfolio"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="code"
+                                >
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img
+                                src="./assets/images/projeto1.webp"
+                                alt="Prévia do formulário de validação"
+                                width="800"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <span class="project-status">Online</span>
+                        </div>
+
+                        <div class="project-content">
+                            <span class="project-number">Projeto 02</span>
+                            <h3>Formulário de Validação</h3>
+                            <p>
+                                Formulário de cadastro responsivo com validação em tempo real,
+                                máscara de telefone e indicador de força da senha.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-buttons">
+                                <a
+                                    href="https://marcossilvaxyz.github.io/formulario-de-validacao/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Ver Projeto
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                                <a
+                                    href="https://github.com/marcossilvaxyz/formulario-de-validacao"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="code"
+                                >
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img
+                                src="./assets/images/projeto2.webp"
+                                alt="Prévia do relógio digital"
+                                width="800"
+                                height="500"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <span class="project-status">Online</span>
+                        </div>
+
+                        <div class="project-content">
+                            <span class="project-number">Projeto 03</span>
+                            <h3>Relógio Digital</h3>
+                            <p>
+                                Relógio responsivo com hora, data e fuso horário em tempo real,
+                                temas claro e escuro e formatos de 12 ou 24 horas.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>LocalStorage</span>
+                            </div>
+
+                            <div class="project-buttons">
+                                <a
+                                    href="https://marcossilvaxyz.github.io/relogio-digital/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Ver Projeto
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                                <a
+                                    href="https://github.com/marcossilvaxyz/relogio-digital"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="code"
+                                >
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- contato -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="contact-text">
+                        <span class="section-label">Contato</span>
+                        <h2>Vamos trabalhar juntos?</h2>
+                        <p>
+                            Estou aberto a oportunidades, novos desafios e projetos
+                            freelancer. Entre em contato e vamos conversar.
+                        </p>
+
+                        <a href="mailto:marcossilva0.xyz@gmail.com" class="contact-email">
+                            <i class="fa-solid fa-envelope"></i>
+                            marcossilva0.xyz@gmail.com
+                        </a>
+
+                        <button
+                            class="email-copy"
+                            type="button"
+                            data-email="marcossilva0.xyz@gmail.com"
+                        >
+                            <i class="fa-regular fa-copy"></i>
+                            Copiar e-mail
+                        </button>
+                    </div>
+
+                    <div class="socials">
+                        <a
+                            href="https://github.com/marcossilvaxyz"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                            data-name="GitHub"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a
+                            href="https://linkedin.com/in/marcos-silva-001xyz/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            data-name="LinkedIn"
+                        >
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a
+                            href="mailto:marcossilva0.xyz@gmail.com"
+                            aria-label="E-mail"
+                            data-name="E-mail"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+
+                        <a
+                            href="https://wa.me/5563993044469"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp"
+                            data-name="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- footer -->
     <footer>
+        <a href="#home" class="logo footer-logo" translate="no">
+            MARS<span>.</span>
+        </a>
+
         <p>
             © 2026 Marcos Alexandre.
             Todos os direitos reservados.
         </p>
+
+        <span>Desenvolvido com HTML, CSS e JavaScript.</span>
     </footer>
+
     <script src="./js/script.js" defer></script>
 </body>
 </html>
